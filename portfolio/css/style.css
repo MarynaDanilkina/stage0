@@ -31,20 +31,71 @@ html,
 body{
     height: 100%;
     line-height: 1;
-    font-size: 12px;
-    color: #000;
+    font-size: 18px;
+    color: #fff;
+	 font-family: Inter;
 }
 .wrapper{
     min-height: 100%;
     overflow: hidden;
+	
 }
-._container{
-    min-width: 1046px;
-    margin: 0px auto;
-}
+
 .text{
     padding:10px 20px;
     margin: 30px;
     border: 5px solid rgb(252, 0, 0);
     font-size: 4em;
+}
+.header {
+	background-image: url(/assets/img/bg.jpg);
+	background-repeat: no-repeat; /* Фоновое изображение не повторяется*/
+	background-position: center top;
+	background-size: 1440px 910px;
+}
+
+.header__container {
+	display: flex;
+}
+._container {
+	max-width: 1400px;
+    margin: 0px auto;
+}
+.header__logo {
+	padding-top: 20px;
+	margin-right: 780px;
+}
+.header__menu {
+}
+.menu {
+}
+.menu__list {
+	display: flex;
+	margin: 20px 0px;
+}
+.menu__item {
+	padding: 0px 0px 0px 30px;
+}
+.menu__link {
+	color: #FFFFFF;
+	font-size: 20px;
+	line-height: calc(50 / 20 * 100%); /**line-height: 50px; font-size: 20px;**/
+
+}
+.header__language {
+	font-size: 20px;
+	line-height: calc(50 / 20 * 100%); /**line-height: 50px; font-size: 20px;**/
+	padding: 0px 0px 0px 31px;
+	margin: 20px 0px;
+	}
+.language__list {
+	display: flex;
+}
+.language__item-en{
+	color: #BDAE82;
+}
+.language__item1 {
+	padding: 0px 8px 0px 9px;
+}
+.languahe__item {
 }
