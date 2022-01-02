@@ -268,3 +268,108 @@ body{
 	line-height: 36px;
 	text-align: center;
 }
+/*****Portfolio******/
+.portfolio {
+}
+.portfolio__body {
+	padding-top: 139px;
+	margin-left: 370px;
+}
+.portfolio__body-line {
+	background: #BDAE82;;
+	width: 700px;
+	height: 2px;
+	margin-bottom: -41px;
+}
+.portfolio__body-title {
+	background: #000;
+	width: 220px;
+	height: 80px;
+	margin-left: 232px;
+	margin-bottom: 60px;
+}
+.portfolio__body-titles {
+	color: #BDAE82;
+	font-family: Merriweather;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 80px ;
+	margin-left: 20px;
+	}
+	.portfolio__header {
+	}
+	.portfolio__header-buttons {
+		display: flex;
+    flex-wrap: wrap;
+    margin: -10px 0;
+	 margin-left: 272px;
+	 width: 890px;
+	 margin-bottom: 60px;
+	}
+	.portfolio__header-button {
+		font-size: 20px;
+		line-height: 40px;
+		text-align: center;
+		display: flex;
+		height: 55px;
+		justify-content: center;
+		align-items: center;
+		letter-spacing: 0.2px;
+	}
+	.portfolio__header-button-winter {
+		padding: 7px 77px; 
+		border: 2px solid #BDAE82;
+		color: #BDAE82;
+	}
+	.portfolio__header-button-spring {
+		padding: 7px 77px;
+		margin-left: 5px;
+		border: 2px solid #BDAE82;
+		color: #BDAE82;
+	}
+	.portfolio__header-button-summer {
+		padding: 7px 67px;
+		margin-left: 5px;
+		border: 2px solid #BDAE82;
+		color: #BDAE82;
+	}
+	.portfolio__header-button-autumn {
+		padding: 7px 71px;
+		margin-left: 5px;
+		background: #BDAE82;
+	   color: #000;
+	}
+	.portfolio__header-photo{
+		display: flex;
+		gap: 25px;
+		flex-wrap: wrap;
+	}
+	/****video******/
+	.video__body {
+		padding-top: 139px;
+	margin-left: 370px;
+	}
+	.video__body-line {
+		background: #BDAE82;;
+	width: 700px;
+	height: 2px;
+	margin-bottom: -41px;
+	}
+	.video__body-title {
+		color: #BDAE82;
+	font-family: Merriweather;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 80px ;
+	margin-left: 20px;
+	}
+	.video__body-titles {
+		color: #BDAE82;
+		font-family: Merriweather;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 80px ;
+		margin-left: 20px;
+	}
+	.video__header {
+	}
