@@ -356,12 +356,11 @@ body{
 	margin-bottom: -41px;
 	}
 	.video__body-title {
-		color: #BDAE82;
-	font-family: Merriweather;
-	font-weight: 700;
-	font-size: 40px;
-	line-height: 80px ;
-	margin-left: 20px;
+		background: #000;
+		width: 156.03px;
+		height: 80px;
+		margin-left: 273px;
+		margin-bottom: 60px;
 	}
 	.video__body-titles {
 		color: #BDAE82;
@@ -372,4 +371,17 @@ body{
 		margin-left: 20px;
 	}
 	.video__header {
+		
+	}
+	.video__header-player{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.video-player{
+		position: relative;
+	}
+	.video-hover{
+		position: absolute;
 	}
