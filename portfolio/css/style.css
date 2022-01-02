@@ -171,6 +171,8 @@ body{
 }
 .skills__header {
 	display: flex;
+		gap: 40px;
+		flex-wrap: wrap;
 }
 /**camera**/
 .skills__header-camera {
@@ -198,8 +200,7 @@ body{
 }
 /**video**/
 .skills__header-video {
-	margin-left: 40px;
-	margin-top: 60px;
+		margin-top: 60px;
 }
 .skills_video-ico {
 	margin-left: 130px;
@@ -222,7 +223,6 @@ body{
 }
 /**image**/
 .skills__header-image {
-	margin-left: 40px;
 	margin-top: 60px;
 }
 .skills_image-ico {
@@ -246,7 +246,6 @@ body{
 }
 /**audio**/
 .skills__header-audio {
-	margin-left: 40px;
 	margin-top: 60px;
 }
 .skills_audio-ico {
@@ -268,7 +267,7 @@ body{
 	line-height: 36px;
 	text-align: center;
 }
-/*****Portfolio******/
+/********************Portfolio******************/
 .portfolio {
 }
 .portfolio__body {
@@ -385,3 +384,103 @@ body{
 	.video-hover{
 		position: absolute;
 	}
+	/**Price**/
+
+.price__body {
+	padding-top: 139px;
+	margin-left: 370px;
+}
+.price__body-title {
+	background: #000;
+	width: 152px;
+	height: 80px;
+	margin-left: 279px;
+	margin-bottom: 60px;
+}
+.price__body-titles{
+	color: #BDAE82;
+	font-family: Merriweather;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 80px ;
+	margin-left: 20px;
+}
+.price__body-line {
+	background: #BDAE82;;
+	width: 700px;
+	height: 2px;
+	margin-bottom: -41px;
+}
+.price__header{
+	display: flex;
+		gap: 25px;
+		flex-wrap: wrap;
+}
+.price__header-standart{
+	width: 450px;
+	height: 505px;
+	border: 3px solid #BDAE82;
+	margin-bottom: 100px;
+}
+.price__header-name{
+	font-family: Merriweather;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 56px;
+	width: 450px;
+	margin-top: 43px;
+	margin-bottom: 20px;
+	text-align: center;
+	
+	justify-content: center;
+	align-items: center;
+}
+.price__header-dollars{
+	font-family: Merriweather;
+	font-weight: 700;
+	color: #BDAE82;
+	font-size: 24px;
+	line-height: 48px;
+	width: 450px;
+	
+	margin-bottom: 20px;
+	text-align: center;
+	
+	justify-content: center;
+	align-items: center;
+}
+.price__header-text-about{
+	width: 364px;
+	height: 180px;
+	margin-left: 43.33px;
+	margin-bottom: 40px;
+}
+.price__header-text{
+	font-size: 18px;
+	line-height: 36px;
+	text-align: center;
+}
+.price__header-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 115px;
+	width: 220px;
+	background: #BDAE82;
+	margin-bottom: 43px;
+	height: 55px;
+}
+.price__header-button{
+	margin-top: 8px;
+	margin-left: 39px;
+	color: #000;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
