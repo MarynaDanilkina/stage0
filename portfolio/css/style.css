@@ -7,9 +7,16 @@
     border: 0;
     box-sizing: border-box;
 }
+a:hover{
+	transition: .3s;
+	color: #BDAE82;
+	text-decoration: none;
+
+}
 a{
     text-decoration: none;
 }
+
 ul,
 ol,
 li{
@@ -35,6 +42,7 @@ body{
     color: #fff;
 	 font-family: Inter;
 	 font-weight: 400;
+	 scroll-behavior: smooth; /**плавная прокрутка по якорям*/
 }
 .wrapper{
     min-height: 100%;
@@ -49,7 +57,7 @@ body{
 }
 /***********************HEADER*************************/
 .header {
-	background-image: url(/assets/img/bg.jpg);
+	background-image: url(/portfolio/assets/img/bg.jpg);
 	background-repeat: no-repeat; /* Фоновое изображение не повторяется*/
 	background-position: center top;
 	background-size: 1440px 910px;
@@ -66,6 +74,14 @@ body{
 .header__logo {
 	padding-top: 20px;
 	margin-right: 780px;
+}
+.logo{
+	fill: #fff;
+	width: 50px;
+	height: 50px;
+}
+.logo:hover{
+	fill: #bdae82;
 }
 .header__menu {
 }
@@ -118,6 +134,11 @@ body{
 	font-size: 20px;
 	line-height: calc(40 / 20 * 100%);
 	width: 470px;
+}
+button:hover{
+	transition: .3s;
+	color: #fff;
+	text-decoration: none;
 }
 .header__hero-button{
 	margin-left: 65px;
@@ -368,8 +389,14 @@ button{
 	.video-player{
 		position: relative;
 	}
-	.video-hover{
+	.video-play{
 		position: absolute;
+		width: 130px;
+		height: 130px;
+		fill: #fff;
+	}
+	.video-play:hover{
+		fill: #bdae82;
 	}
 	/**Price**/
 
@@ -460,7 +487,7 @@ button{
 }
 /********Contact********/
 .contacts {
-	background: url('/assets/img/contacts.jpg');
+	background: url('/portfolio/assets/img/contacts.jpg');
 	background-size: auto 700px;
 	background-position: center center;
  }
@@ -503,19 +530,20 @@ form{
 	width: 450px;
 	height: 50px;
 	margin-bottom: 20px;
-	background: transparent;
+	background-color: rgba(0, 0, 0, 0.5);
 
 }
 .form-tel{
+	background-color: rgba(0, 0, 0, 0.5);
 	border: 2px solid #bdae82;
 	padding-left: 20px;
 	padding-top: 5px;
 	width: 450px;
 	height: 50px;
 	margin-bottom: 20px;
-	background: transparent;
 }
 .form-text{
+	background-color: rgba(0, 0, 0, 0.5);
 	border: 2px solid #bdae82;
 	padding-left: 20px;
 	padding-top: 5px;
@@ -523,7 +551,6 @@ form{
 	min-height: 100px;
 	margin-bottom: 30px;
 	resize: none;
-	background: transparent;
 }
 .button-gold{
 	color: #000;
@@ -593,4 +620,36 @@ a{
 }
 .footer__ico-pinterest{
 	margin-left: 20px;
+}
+.ico__insta{
+	fill: #fff;
+	width: 32px;
+	height: 32px;
+}
+.ico__insta:hover{
+	fill: #bdae82;
+}
+.ico__fb{
+	fill: #fff;
+	width: 32px;
+	height: 32px;
+}
+.ico__fb:hover{
+	fill: #bdae82;
+}
+.ico__tw{
+	fill: #fff;
+	width: 32px;
+	height: 32px;
+}
+.ico__tw:hover{
+	fill: #bdae82;
+}
+.ico__pinterest{
+	fill: #fff;
+	width: 32px;
+	height: 32px;
+}
+.ico__pinterest:hover{
+	fill: #bdae82;
 }
