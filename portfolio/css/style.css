@@ -119,19 +119,21 @@ body{
 	line-height: calc(40 / 20 * 100%);
 	width: 470px;
 }
-.header__hero-buttons {
-	background:#BDAE82 ;
+.header__hero-button{
 	margin-left: 65px;
 	margin-top: 25px;
+	background-color:#BDAE82 ;
+	color: #000;
+}
+button{
 	height: 55px;
 	width: 220px;
-	}
-.header__hero-button {
 	font-size: 20px;
 	line-height: calc(40 / 20 * 140%);
-	color: #000;
-	margin-left: 73px;
+	cursor: pointer;
+	font-family: inherit;
 }
+
 /***************************MAIN*********************************/
 .main {
 	width: 1440px;
@@ -146,7 +148,7 @@ body{
 }
 .skills__body {
 	padding-top: 139px;
-	margin-left: 370px;
+	margin-left: 350px;
 }
 .skills__body-title {
 	background: #000;
@@ -271,7 +273,7 @@ body{
 }
 .portfolio__body {
 	padding-top: 139px;
-	margin-left: 370px;
+	margin-left: 350px;
 }
 .portfolio__body-line {
 	background: #BDAE82;;
@@ -296,56 +298,42 @@ body{
 	}
 	.portfolio__header {
 	}
-	.portfolio__header-buttons {
-		display: flex;
-    flex-wrap: wrap;
-    margin: -10px 0;
-	 margin-left: 272px;
-	 width: 890px;
-	 margin-bottom: 60px;
-	}
-	.portfolio__header-button {
-		font-size: 20px;
-		line-height: 40px;
-		text-align: center;
-		display: flex;
-		height: 55px;
-		justify-content: center;
-		align-items: center;
-		letter-spacing: 0.2px;
-	}
-	.portfolio__header-button-winter {
-		padding: 7px 77px; 
-		border: 2px solid #BDAE82;
-		color: #BDAE82;
-	}
-	.portfolio__header-button-spring {
-		padding: 7px 77px;
-		margin-left: 5px;
-		border: 2px solid #BDAE82;
-		color: #BDAE82;
-	}
-	.portfolio__header-button-summer {
-		padding: 7px 67px;
-		margin-left: 5px;
-		border: 2px solid #BDAE82;
-		color: #BDAE82;
-	}
-	.portfolio__header-button-autumn {
-		padding: 7px 71px;
-		margin-left: 5px;
-		background: #BDAE82;
-	   color: #000;
-	}
-	.portfolio__header-photo{
-		display: flex;
-		gap: 25px;
-		flex-wrap: wrap;
-	}
+.portfolio__header-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 252px;
+	width: 895px;
+	margin-bottom: 60px;
+	gap: 5px;
+}
+.portfolio__header-button-winter {
+	background-color: transparent;
+	border: 2px solid #BDAE82;
+	color: #BDAE82;
+}
+.portfolio__header-button-spring {
+	background-color: transparent;
+	border: 2px solid #BDAE82;
+	color: #BDAE82;
+}
+.portfolio__header-button-summer {
+	background-color: transparent;
+	border: 2px solid #BDAE82;
+	color: #BDAE82;
+}
+.portfolio__header-button-autumn {
+	background-color:#BDAE82 ;
+	color: #000;
+}
+.portfolio__header-photo{
+	display: flex;
+	gap: 25px;
+	flex-wrap: wrap;
+}
 	/****video******/
 	.video__body {
 		padding-top: 139px;
-	margin-left: 370px;
+	margin-left: 350px;
 	}
 	.video__body-line {
 		background: #BDAE82;;
@@ -387,7 +375,7 @@ body{
 
 .price__body {
 	padding-top: 139px;
-	margin-left: 370px;
+	margin-left: 350px;
 }
 .price__body-title {
 	background: #000;
@@ -463,21 +451,12 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: 115px;
-	width: 220px;
-	background: #BDAE82;
 	margin-bottom: 43px;
-	height: 55px;
 }
 .price__header-button{
-	margin-top: 8px;
-	margin-left: 39px;
+	background-color:#BDAE82 ;
 	color: #000;
-	font-size: 20px;
-	line-height: 40px;
-	text-align: center;
-	height: 40px;
-	justify-content: center;
-	align-items: center;
+	
 }
 /********Contact********/
 .contacts {
@@ -487,13 +466,12 @@ body{
  }
 .contacts__me{
 	padding-top: 60px;
-	margin-left: 950px;
+	margin-left: 970px;
 	width: 450px;
-	height: 445x;
 }
 .contact__me-title{
 	font-family: Merriweather;
-	font-style: 700;
+	font-weight: 700;
 	font-size: 40px;
 	line-height: 80px;
 	color: #BDAE82;
@@ -507,7 +485,7 @@ body{
 	color: #bdae82;
 	font-size: 20px;
 	line-height: 40px;
-	z-index: 1;
+	
  }
   * {
 	  outline: none;
@@ -516,33 +494,7 @@ form{
 	width: 445px;
 	position: relative;
 	padding-bottom: 192.1px;
-}
-.contact__form-mail::after{
-	position: absolute;
-	content: '';
-	background-color: rgba(0, 0, 0, 0.5);
-	width: 446px;
-	height: 46px;
-	left: 2px;
-	top: 2px;
-}
-.contact__form-tel::after{
-	position: absolute;
-	content: '';
-	background-color: rgba(0, 0, 0, 0.5);
-	width: 446px;
-	height: 46px;
-	left: 2px;
-	top: 72px;
-}
-.contact__form-text::after{
-	position: absolute;
-	content: '';
-	background-color: rgba(0, 0, 0, 0.5);
-	width: 446px;
-	height: 96px;
-	left: 2px;
-	top: 142px;
+	
 }
 .form-mail{
 	border: 2px solid #bdae82;
@@ -573,7 +525,12 @@ form{
 	resize: none;
 	background: transparent;
 }
-button{
+.button-gold{
+	color: #000;
+	background-color: #BDAE82;
+	
+}
+.button-black{
 	width: 220px;
 	height: 55px;
 	display: block;
@@ -612,6 +569,7 @@ button{
 .footer__github-github {
 	margin-left: 20px;
 	color: #fff;
+	margin-right: 13px;
 }
 a{
 	color: #fff;
@@ -623,8 +581,8 @@ a{
 	margin-left: 413px;
 }
 .footer__ico{
-	padding-top: 50px;
-	margin-left: 406px;
+	padding-top: 59px;
+	margin-left: 410px;
 	display: flex;
 }
 .footer__ico-fb{
