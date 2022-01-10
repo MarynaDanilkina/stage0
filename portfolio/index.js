@@ -1,1 +1,11 @@
-console.log('1. +10 \n2. +20\n3. +48\n4. +12\n5. +20\n100/100')
+/*****Меню бургер*****/
+
+const iconMenu = document.querySelector('.header__menu-icon');
+if(iconMenu){
+	const menuHeader = document.querySelector('.header__menu');
+	iconMenu.addEventListener("click", function(e){
+		document.body.classList.toggle('_lock');
+		iconMenu.classList.toggle('_active');
+		menuHeader.classList.toggle('_active');
+	});
+}

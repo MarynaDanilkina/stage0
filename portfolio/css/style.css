@@ -44,6 +44,9 @@ body{
 	 font-weight: 400;
 	 scroll-behavior: smooth; /**плавная прокрутка по якорям*/
 }
+body._lock{
+	overflow: hidden;
+}
 .wrapper{
     min-height: 100%;
     overflow: hidden;
@@ -57,6 +60,7 @@ body{
 }
 /***********************HEADER*************************/
 .header {
+	
 	background-image: url(../assets/img/bg.jpg);
 	background-repeat: no-repeat; /* Фоновое изображение не повторяется*/
 	background-position: center top;
@@ -64,16 +68,40 @@ body{
 	padding-bottom: 332px;
 }
 
-.header__container {
-	display: flex;
-}
+
 ._container {
 	max-width: 1400px;
    margin: 0px auto;
+	padding: 0px 15px; /**Убрать прилипание**/
+	box-sizing: content-box; /**Убрать прилипание**/
 }
 .header__logo {
 	padding-top: 20px;
 	margin-right: 780px;
+}	
+@media (max-width: 1440px){
+	.header__logo {
+		padding-top: 20px;
+		margin-right: 600px;
+	}	
+}
+@media (max-width: 1240px){
+	.header__logo {
+		padding-top: 20px;
+		margin-right: 450px;
+	}	
+}
+@media (max-width: 1120px){
+	.header__logo {
+		padding-top: 20px;
+		margin-right: 250px;
+	}	
+}
+@media (max-width: 920px){
+	.header__logo {
+		padding-top: 20px;
+		margin-right: 100px;
+	}	
 }
 .logo{
 	fill: #fff;
@@ -83,29 +111,133 @@ body{
 .logo:hover{
 	fill: #bdae82;
 }
-.header__menu {
-}
-.menu {
-}
-.menu__list {
-	display: flex;
-	margin: 20px 0px;
-}
-.menu__item {
-	padding: 0px 0px 0px 30px;
-}
-.menu__link {
-	color: #FFFFFF;
-	font-size: 20px;
-	line-height: calc(50 / 20 * 100%); /**line-height: 50px; font-size: 20px;**/
-	font-weight: 500;
-}
-.header__language {
-	font-size: 20px;
-	line-height: calc(50 / 20 * 100%); /**line-height: 50px; font-size: 20px;**/
-	padding: 0px 0px 0px 31px;
-	margin: 20px 0px;
+/***Навигация после 769px***/
+@media (min-width: 769px){
+	.header__container {
+		display: flex;
 	}
+	.menu__list {
+		display: flex;
+		margin: 20px 0px;
+	}
+	.menu__link {
+		color: #FFFFFF;
+		font-size: 20px;
+		line-height: calc(50 / 20 * 100%); /**line-height: 50px; font-size: 20px;**/
+		font-weight: 400;
+	}
+	.menu__item {
+		padding: 0px 0px 0px 30px;
+	}
+	
+	.header__language {
+			margin-top: 35px;
+			padding: 0px 0px 0px 31px;
+
+			font-size: 20px;
+	}
+		
+}
+
+.header__menu-icon {
+	display: none;
+}
+/***Бургер меню***/
+@media(max-width: 768px){
+	.header__menu-icon{
+		z-index: 2000;
+		display: block;
+		position: relative;
+		margin-top: 11px;
+		margin-left: 640px;
+		margin-top: -40px;
+		width: 50px;
+		height: 28px;
+		cursor: pointer;
+	}
+	.header__menu-icon span,
+	.header__menu-icon::before,
+	.header__menu-icon::after{
+		left: 0;
+		position: absolute;
+		height: 10%;
+		width: 100%;
+		transition: all 0.3s ease 0s;
+		background-color: #fff;
+	}
+	.header__menu-icon::before,
+	.header__menu-icon::after{
+		content: "";
+	}
+	.header__menu-icon::before{
+		top: 0;
+
+	}
+	.header__menu-icon::after{
+		bottom: 0;
+
+	}
+	.header__menu-icon span{
+		top: 50%;
+		transform: scale(1) translate(0px, -50%);
+	}
+	.header__menu-icon._active span{
+		transform: scale(0) translate(0px, -50%);
+	}
+	.header__menu-icon._active::before{
+		top: 50%;
+		transform: rotate(-45deg) translate(0px, -50%);
+	}
+	.header__menu-icon._active::after{
+		top: 50%;
+		transform: rotate(45deg) translate(0px, -50%);
+	}
+	.header__menu{
+		position: fixed;
+		top: 0;
+		left: 100%;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.50);
+		transition: left 0.3s ease 0s;
+		
+	}
+
+	.header__menu._active{
+		left: 0;
+	}
+	.header__language {
+		margin-top: -25px;
+		margin-left: 525px;
+		font-size: 20px;
+		}
+	.menu__list{
+		padding-top: 134px;
+	
+		height: 1024px;
+		margin-left: 148px;
+		background-color: #000;
+	}
+	.menu__item {
+		margin-bottom: 10px;
+		margin-left: 127px;
+		line-height: 127%;
+		line-height: 72.55px;
+	
+	}
+	.menu__link{
+		font-size: 34.82px;
+		line-height: 72.55px;
+	}
+	.header__logo {
+		margin-left: 45px;
+		padding-top: 20px;
+		margin-right: 780px;
+	}
+}
+	
+
+
 .language__list {
 	display: flex;
 }
@@ -492,7 +624,7 @@ button{
  }
 .contacts__me{
 	padding-top: 60px;
-	margin-left: 970px;
+	margin-left: 950px;
 	width: 450px;
 }
 .contact__me-title{
@@ -652,3 +784,4 @@ a{
 .ico__pinterest:hover{
 	fill: #bdae82;
 }
+/***/
