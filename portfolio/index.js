@@ -1,3 +1,4 @@
+
 /*****Меню бургер*****/
 
 const iconMenu = document.querySelector('.header__menu-icon');
@@ -41,11 +42,10 @@ function changeImage(event) {
 	}
  }
 
- /* Подсветка активной кнопки */
+ /* Подсветка активной кнопки в разделе portfolio*/
 
  /*Найти все кнопки используя метод querySelectorAll() */
-
- const portfolioButton = document.querySelectorAll('._portfolio-btn')
+const portfolioButton = document.querySelectorAll('._portfolio-btn')
 const portfoliocontainer = document.querySelector('.portfolio__header-buttons')
 
 portfoliocontainer.addEventListener("click",  Buttonevent);
@@ -60,3 +60,48 @@ portfoliocontainer.addEventListener("click",  Buttonevent);
 	target.classList.add('active') 
 }}
 
+ /* Подсветка активной кнопки в разделе lang*/
+
+const langButton = document.querySelectorAll('.lang')
+const langcontainer = document.querySelector('.language__list')
+
+langcontainer.addEventListener("click",  ButtonLeng);
+
+ function ButtonLeng(event) {
+	if(event.target.classList.contains('lang')) {
+		langButton.forEach(Buto => {
+			 	Buto.classList.remove('_active');
+	})
+
+	const target = event.target;
+	target.classList.add('_active') 
+		
+}}
+
+
+/* Смена языка */
+import i18Obj from './translate.js';
+
+const buttonLang = document.querySelectorAll('.lang')
+ //родитель переключателей
+const langContainer = document.querySelector('.language__list')
+//для родителя при клике функция
+langContainer.addEventListener("click",  getActive);
+
+const language = document.querySelectorAll('[data-i18]')
+
+function getActive(event){
+//найти кнопку что нажали вывод ее ""
+	const languages = event.target.dataset.leng
+	return getTranslate(languages)
+
+
+function getTranslate(lng){
+
+language.forEach((el) => {
+			
+		el.textContent = i18Obj[lng][el.dataset.i18]
+		console.log(i18Obj)
+
+})
+}}

@@ -345,14 +345,30 @@ body._lock{
 .language__list {
 	display: flex;
 }
-.language__item-en{
-	color: #BDAE82;
+.lang{
+	font-size: inherit;
+	line-height: inherit;
+	font-weight: inherit;
+	color: inherit;
+	border: none;
+	background: transparent;
+	transition: 0.3s;
+	padding: 0;
 }
+.lang:hover
+{
+    cursor: pointer;
+    color: #BDAE82;
+}
+.lang._active
+{
+    color: #BDAE82;
+}
+
 .language__item1 {
 	padding: 0px 8px 0px 9px;
 }
-.languahe__item {
-}
+
 .header__hero {
 	margin-top: 158px;
 }
@@ -450,7 +466,7 @@ body._lock{
 		line-height: 20px;
 	}
 }
-button:hover{
+.header__hero-button:hover{
 	transition: .3s;
 	color: #fff;
 	text-decoration: none;
@@ -482,7 +498,7 @@ button:hover{
 			
 	  }
 }
-button{
+.header__hero-button{
 	height: 55px;
 	width: 220px;
 	font-size: 20px;
@@ -490,8 +506,9 @@ button{
 	cursor: pointer;
 	font-family: inherit;
 }
+
 @media (max-width: 500px){
-	button{
+	.header__hero-button{
 		height: 55px;
 		width: 150px;
 		font-size: 20px;
@@ -500,9 +517,75 @@ button{
 		font-family: inherit;
 	}
 }
-
-
-
+._portfolio-btn{
+	height: 55px;
+	width: 220px;
+	font-size: 20px;
+	line-height: calc(40 / 20 * 140%);
+	cursor: pointer;
+	font-family: inherit;
+}
+._portfolio-btn:hover{
+	transition: .3s;
+	color: #fff;
+	text-decoration: none;
+}
+@media (max-width: 500px){
+	._portfolio-btn{
+		height: 55px;
+		width: 150px;
+		font-size: 20px;
+		line-height: calc(40 / 20 * 140%);
+		cursor: pointer;
+		font-family: inherit;
+	}
+}
+.price__header-button{
+	height: 55px;
+	width: 220px;
+	font-size: 20px;
+	line-height: calc(40 / 20 * 140%);
+	cursor: pointer;
+	font-family: inherit;
+}
+.price__header-button:hover{
+	transition: .3s;
+	color: #fff;
+	text-decoration: none;
+}
+@media (max-width: 500px){
+	.price__header-button{
+		height: 55px;
+		width: 150px;
+		font-size: 20px;
+		line-height: calc(40 / 20 * 140%);
+		cursor: pointer;
+		font-family: inherit;
+	}
+}
+.button-gold{
+	height: 55px;
+	width: 220px;
+	font-size: 20px;
+	line-height: calc(40 / 20 * 140%);
+	cursor: pointer;
+	font-family: inherit;
+}
+.button-gold:hover{
+	transition: .3s;
+	color: #fff;
+	text-decoration: none;
+}
+@media (max-width: 500px){
+	.button-gold{
+		height: 55px;
+		width: 150px;
+		font-size: 20px;
+		line-height: calc(40 / 20 * 140%);
+		cursor: pointer;
+		font-family: inherit;
+	}
+}
 .main-block__image {
 	position: absolute;
 	width: 100%;
