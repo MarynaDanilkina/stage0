@@ -272,7 +272,15 @@ body._lock{
 	}
 }
 
-
+@media(max-width: 450px){
+	.menu__list{
+		padding-top: 120px;
+	
+		height: 1024px;
+		margin-left: 0px;
+		background-color: #000;
+	}
+}
 
 
 
@@ -1039,28 +1047,23 @@ button{
 	gap: 5px;
 }
 
-.portfolio__header-button-winter {
+._portfolio-btn{
 	background-color: transparent;
 	border: 2px solid #BDAE82;
 	color: #BDAE82;
 }
-
-.portfolio__header-button-spring {
-	background-color: transparent;
-	border: 2px solid #BDAE82;
-	color: #BDAE82;
-}
-.portfolio__header-button-summer {
-	background-color: transparent;
-	border: 2px solid #BDAE82;
-	color: #BDAE82;
-}
-
-.portfolio__header-button-autumn {
-	padding-top: 2px;
+._portfolio-btn:hover{
+	
+	
+	color: #fff;
+	
+ }
+ .active{
+	
 	background-color:#BDAE82 ;
 	color: #000;
-}
+	border: 0;
+ }
 
 .portfolio__header-photo{
 	display: flex;
