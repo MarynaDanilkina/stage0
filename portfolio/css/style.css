@@ -14,7 +14,8 @@ a:hover{
 
 }
 a{
-    text-decoration: none;
+	color: #fff;
+	text-decoration: none;
 }
 
 ul,
@@ -63,12 +64,14 @@ body._lock{
 	position: relative;
 }
 ._ibg img {
+	
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
 	object-fit: cover;
+	
 }
 /***********************HEADER*************************/
 .header{
@@ -85,50 +88,80 @@ body._lock{
    align-items: center;
 }
 
+.header__moon {
+		border: none;
+	background: transparent;
+	margin-left: 28px;
+	background-image: url('../assets/img/moon.svg');
+	background-size: contain;
+	background-repeat: no-repeat;  
+	transition: 0.3s;
+	width: 45px;
+	height: 45px;
+}
+.header__moon:hover{
+	filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}	
+.header__sun {
+	border: none;
+	background: transparent;
+	margin-left: 28px;
+	background-image: url('../assets/img/sun.svg');
+	background-size: contain;
+	background-repeat: no-repeat;  
+	transition: 0.3s;
+	width: 45px;
+	height: 45px;
+}
+.header__sun:hover{
+	filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}	
 .header__logo {
 	
-	margin-right: 780px;
+	margin-right: 605px;
 }
 @media (max-width: 1439px){
-	.header__logo {
-		
-		margin-right: 700px;
-	}
-}
-@media (max-width: 1360px){
-	.header__logo {
-		
-		margin-right: 600px;
-	}
-}
-@media (max-width: 1250px){
 	.header__logo {
 		
 		margin-right: 500px;
 	}
 }
-@media (max-width: 1150px){
+@media (max-width: 1360px){
 	.header__logo {
 		
 		margin-right: 400px;
 	}
 }
-@media (max-width: 1050px){
+@media (max-width: 1250px){
 	.header__logo {
 		
 		margin-right: 300px;
 	}
 }
-@media (max-width: 950px){
+@media (max-width: 1150px){
 	.header__logo {
 		
 		margin-right: 200px;
 	}
 }
-@media (max-width: 850px){
+@media (max-width: 1050px){
 	.header__logo {
 		
 		margin-right: 100px;
+	}
+}
+@media (max-width: 950px){
+	.header__logo {
+		
+		margin-right: 70px;
+	}
+}
+@media (max-width: 850px){
+	.header__logo {
+		
+		margin-right: 2px;
 	}
 }
 @media (max-width: 768px){
@@ -364,7 +397,12 @@ body._lock{
 {
     color: #BDAE82;
 }
-
+.language__list{
+	margin-left: 5px;
+}
+.language__item{
+	margin-left: 3px;
+}
 .language__item1 {
 	padding: 0px 8px 0px 9px;
 }
@@ -466,16 +504,22 @@ body._lock{
 		line-height: 20px;
 	}
 }
-.header__hero-button:hover{
-	transition: .3s;
-	color: #fff;
-	text-decoration: none;
-}
+
 .header__hero-button{
 	margin-left: 65px;
 	margin-top: 25px;
 	background-color:#BDAE82 ;
 	color: #000;
+}
+.header__hero-button:hover{
+	transition: 0.6s;
+	color: #fff;
+	text-decoration: none;
+	box-shadow: 0 0 0 0.5em rgba(0, 0, 0, 0);
+	animation: header__hero-button 0.8s;
+}
+@keyframes header__hero-button{
+	0%{box-shadow: 0 0 0 0 #BDAE82}
 }
 @media (max-width: 768px){
 	.header__hero-button {
@@ -587,6 +631,7 @@ body._lock{
 	}
 }
 .main-block__image {
+	
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -664,12 +709,12 @@ body._lock{
 /***************************MAIN*********************************/
 .wrapper {
 	flex: 1 1 auto;
-	
 	margin: 0 auto;
 	background-color:#000;
 	background-position: center top;
 	
 }
+
 /************SKILLS*********/
 .skills {
 	width: 100%;
@@ -720,7 +765,7 @@ body._lock{
 	}
 }
 .skills__body-title {
-	background: #000;
+	background-color: #000;
 	width: 152px;
 	height: 80px;
 	
@@ -813,9 +858,7 @@ body._lock{
 		margin-left: 0px;
 	}
 }
-.skills_camera-ico {
-	
-}
+
 .skills_camera-photo {
 	margin-top: 50px;
 	font-weight: 700;
@@ -862,9 +905,7 @@ body._lock{
 	}
 }
 
-.skills_video-ico {
-	
-}
+
 .skills_video-video {
 	margin-top: 50px;
     font-weight: 700;
@@ -918,9 +959,7 @@ body._lock{
 		margin-left: 0px;
 	}
 }
-.skills_image-ico {
-	
-}
+
 .skills_image-retouch {
 	margin-top: 50px;
 	font-weight: 700;
@@ -971,9 +1010,7 @@ body._lock{
 	}
 }
 
-.skills_audio-ico {
 
-}
 .skills_audio-audio {
 	margin-top: 50px;
 	font-weight: 700;
@@ -1035,9 +1072,7 @@ body._lock{
 		
 	}
 }
-.portfolio__header{
 
-}
 @media (max-width: 1439px){
 	.portfolio__header{
 		margin-top: -6px;
@@ -1136,11 +1171,17 @@ body._lock{
 	color: #BDAE82;
 }
 ._portfolio-btn:hover{
-	
-	
+	transition: 0.6s;
 	color: #fff;
-	
- }
+	text-decoration: none;
+	box-shadow: 0 0 0 0.5em rgba(0, 0, 0, 0);
+	animation: _portfolio-btn 0.8s;
+}
+@keyframes _portfolio-btn{
+	0%{box-shadow: 0 0 0 0 #BDAE82}
+}
+
+
  .active{
 	
 	background-color:#BDAE82 ;
@@ -1205,8 +1246,7 @@ body._lock{
 			
 		}
 	}
-	.video__header {
-	}
+	
 	.video__header-player{
 		position: relative;
 		display: flex;
@@ -1306,9 +1346,7 @@ body._lock{
 		
 	}
 }
-.price__header{
-	
-}
+
 @media (max-width: 1439px){
 	.price__header{
 		margin-top: -6px;
@@ -1446,9 +1484,19 @@ body._lock{
 	color: #000;
 	
 }
+.price__header-button:hover{
+	transition: 0.6s;
+	color: #fff;
+	text-decoration: none;
+	box-shadow: 0 0 0 0.5em rgba(0, 0, 0, 0);
+	animation: price__header-button 0.8s;
+}
+@keyframes price__header-button{
+	0%{box-shadow: 0 0 0 0 #BDAE82}
+}
 /********Contact********/
 .contacts {
-	background: url('../assets/img/contacts.jpg');
+	background: url('../assets/img/contacts.jpg') no-repeat;
 	background-size: auto 700px;
 	background-position: center center;
 	display: flex;
@@ -1482,9 +1530,7 @@ body._lock{
 }
 
 
-.contacts__me-body{
 
-}
 @media (max-width: 1439px){
 	.contacts__me-body{
 		display: flex;
@@ -1555,9 +1601,7 @@ form{
 		padding-bottom: 111px;
 	}
 }
-.contact__form-mail{
 
-}
 @media (max-width: 1439px){
 	.contact__form-mail{
 		width: 100%;
@@ -1606,6 +1650,16 @@ form{
 	color: #000;
 	background-color: #BDAE82;
 	
+}
+.button-gold:hover{
+	transition: 0.6s;
+	color: #fff;
+	text-decoration: none;
+	box-shadow: 0 0 0 0.5em rgba(0, 0, 0, 0);
+	animation: button-gold 0.8s;
+}
+@keyframes button-gold{
+	0%{box-shadow: 0 0 0 0 #BDAE82}
 }
 .button-black{
 	width: 220px;
@@ -1705,8 +1759,7 @@ margin: 0 auto;
 		
 	}
 }
-.footer__github-symbols {
-}
+
 .footer__github-year {
 	margin-left: 20px;
 
@@ -1716,10 +1769,10 @@ margin: 0 auto;
 	color: #fff;
 	margin-right: 13px;
 }
-a{
+
+.footer__git{
 	color: #fff;
 }
-
 @media (min-width: 769px){
 	.footer__rss{
 		padding-top: 50px;
@@ -1793,3 +1846,17 @@ a{
 	fill: #bdae82;
 }
 /***/
+.__sun{
+	background-color: #fff;
+	color: #000;
+	fill: #000;
+}
+._sun{
+	color: #fff;
+}
+.sun:hover{
+	background-color: #bdae82;
+}
+.sun_{
+	background-color: #000;
+}
