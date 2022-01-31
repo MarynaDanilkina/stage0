@@ -2,28 +2,39 @@
 /*****Меню бургер*****/
 //бургер меню
 const iconMenu = document.querySelector('.header__menu-icon');
+const iconMenuAc = document.querySelector('._active');
 //общий класс для навигации
 const menuHeader = document.querySelector('.header__menu');
+
 if(iconMenu){
 	//при клике на бургер меню
 	iconMenu.addEventListener("click", function(e){
 		//блокируется весь экран
-		document.body.classList.toggle('_lock');
+		if(iconMenuAc){
+			document.body.classList.add('_lock');
+		}
+		
 
 		iconMenu.classList.toggle('_active');
 		menuHeader.classList.toggle('_active');
 	});
 }
+
 const navMenu = document.querySelectorAll('.menu__link');
 navMenu.forEach(n => n.addEventListener("click", closeMenu));
 function closeMenu() {
-	document.body.classList.toggle('_lock');
+	document.body.classList.remove('_lock');
 	iconMenu.classList.remove('_active');
 	menuHeader.classList.remove('_active');
 	
 }
 
 /*****Смена значка при разных темах светлая и темная*****/
+
+
+
+
+
 const moon = document.querySelector('.header__moon')
 const sun = document.querySelector('.header__sun')
 const icon = document.querySelector('.header__icon')
@@ -31,51 +42,110 @@ const icon = document.querySelector('.header__icon')
 	moon.addEventListener("click", function(a){
 		icon.classList.toggle('header__moon')
 		icon.classList.toggle('header__sun')
+	if(icon.classList.contains('header__sun')){
+		//header
+		document.querySelector('.logo').style.fill = "#000";
+		document.querySelectorAll('.menu__link').forEach((el) => {
+			el.classList.add("sun") });
+		document.querySelectorAll('.lang').forEach((el) => {
+			el.classList.add("sun") });
+		document.querySelector('.language__item1').style.color = "#000";
+		document.querySelector('.wrapper').style.backgroundColor = "#FFF";
+		document.querySelector('.main-block__image').style.backgroundImage = "url('./assets/img/bg2.jpg')";
+		document.querySelectorAll('.all__body-title').forEach((el)=>{
+			el.style.backgroundColor = "#FFF"});
+		document.querySelectorAll('.all__body-titles').forEach((el)=>{
+			el.style.color = "#000"});
+		document.querySelector('.skills__body-title').style.backgroundColor = "#FFF";
+		document.querySelectorAll('.section__body-line').forEach((el)=>{
+			el.style.backgroundColor = "#BDAE82"});
+		//mein
+		document.querySelector('.header__hero-title').style.color = "#000";
+		document.querySelector('.header__hero-text').style.color = "#000";
+		document.querySelector('.header__hero-button').classList.add('sunWhB')
+		//skills
+		document.querySelector('.skills__header').style.color = "#000";
+		//portfolio
+		document.querySelectorAll('._portfolio-btn').forEach((el) => {
+			el.classList.add('sunWB') });
+		//price
+		document.querySelector('.price__header-body').style.color = "#000";
+		document.querySelectorAll('.price__header-button').forEach((el) => {
+			el.classList.add('sunWB') });
 		
+		//contact
+		document.querySelector('.button-gold').classList.add('sunWhB')
+		document.querySelector('.contact__me-title').style.color = "#000";
+		document.querySelector('.contacts').style.backgroundImage = "url('./assets/img/contacts2.jpg')";
+		
+		//footer
+		document.querySelector('.footer').style.backgroundColor = "#FFF";
+		document.querySelectorAll('.footer a').forEach((el) => {
+			el.style.color = "#000"; });
+		document.querySelectorAll('.footer').forEach((el) => {
+			el.style.color = "#000"; });
+		document.querySelectorAll('.footer__ico li a svg').forEach((el) => {
+			el.style.fill = "#000"; });
+		
+		
+	
+
+	}else if(icon.classList.contains('header__moon')){
+		//header
+		document.querySelector('.logo').style.fill = "#FFF";
+		document.querySelectorAll('.menu__link').forEach((el) => {
+			el.classList.remove("sun") });
+		document.querySelectorAll('.lang').forEach((el) => {
+			el.classList.remove("sun") });
+			document.querySelector('.language__item1').style.color = "#FFF";
+		document.querySelector('.wrapper').style.backgroundColor = "#000";	
+		document.querySelector('.main-block__image').style.backgroundImage = "url('./assets/img/bg.jpg')";
+		
+		document.querySelectorAll('.all__body-title').forEach((el)=>{
+			el.style.backgroundColor = "#000"});
+		document.querySelectorAll('.all__body-titles').forEach((el)=>{
+			el.style.color = "#BDAE82"});
+		document.querySelector('.skills__body-title').style.backgroundColor = "#000";
+		document.querySelectorAll('.section__body-line').forEach((el)=>{
+			el.style.backgroundColor = "#BDAE82"});
+		//mein
+		document.querySelector('.header__hero-title').style.color = "#FFF";
+		document.querySelector('.header__hero-text').style.color = "#FFF";
+		document.querySelector('.header__hero-button').classList.remove('sunWhB')
+		//skills
+		document.querySelector('.skills__header').style.color = "#FFF";
+		//portfolio
+		document.querySelectorAll('._portfolio-btn').forEach((el) => {
+			el.classList.remove('sunWB') });
+		//price
+		document.querySelector('.price__header-body').style.color = "#FFF";
+		document.querySelectorAll('.price__header-button').forEach((el) => {
+			el.classList.remove('sunWB') });
+		//contact
+		document.querySelector('.button-gold').classList.remove('sunWhB')
+		document.querySelector('.contact__me-title').style.color = "#BDAE82";
+		document.querySelector('.contacts').style.backgroundImage = "url('./assets/img/contacts.jpg')";
+		
+
+
+		//footer
+		document.querySelector('.footer').style.backgroundColor = "#000";
+		document.querySelectorAll('.footer a').forEach((el) => {
+			el.style.color = "#FFF"; });
+		document.querySelectorAll('.footer').forEach((el) => {
+			el.style.color = "#FFF"; });
+		document.querySelectorAll('.footer__ico li a svg').forEach((el) => {
+			el.style.fill = "#FFF"; });
+		
+	}	
 	})
-	const wrapper = document.querySelector('.wrapper')
-	const skills = document.querySelector('.skills__body-title')
-	const skillsTitle = document.querySelector('.skills__body-titles')
-	const portfolio = document.querySelector('.portfolio__body-title')
-	const portfolioTitle = document.querySelector('.portfolio__body-titles')
-	const video = document.querySelector('.video__body-title')
-	const videoTitle = document.querySelector('.video__body-titles')
-	const price = document.querySelector('.price__body-title')
-	const priceTitle = document.querySelector('.price__body-titles')
-	const footer = document.querySelector('.footer')
-	const footerA = document.querySelector('.footer__rss a')
-	const footerB = document.querySelector('.footer__github-github a')
-	const footerInsta = document.querySelector('.ico__insta')
-	const footerFb = document.querySelector('.ico__fb')
-	const footerTw = document.querySelector('.ico__tw')
-	const footerPinterest = document.querySelector('.ico__pinterest')
-	const headerTitle = document.querySelector('.header__hero-title')
-	const headerText = document.querySelector('.header__hero-text')
-	const languageList = document.querySelector('.language__list')
-	const portfolioBtn = document.querySelectorAll('._portfolio-btn')
+
+
 
 	
 
-const arr = [wrapper, skills, skillsTitle, portfolio, portfolioTitle, video, videoTitle, price, priceTitle, footer, footerA, footerB, footerInsta, footerFb, footerTw, footerPinterest];
-	
-const arr1 = [headerTitle, headerText, languageList];
 
 
-moon.addEventListener("click", function(c){
-	
-	
-	portfolioBtn.forEach(el=> But(el))
-	arr.forEach(el=> el.classList.toggle('__sun'))
-	
-	arr1.forEach(el=> el.classList.toggle('_sun'))
-	
-
-
-	
-})
-function But(el){
-	el.classList.toggle('sun')
-}
 /********* Замена изображения в portfolio ***********/
 
 
@@ -129,17 +199,18 @@ langcontainer.addEventListener("click",  ButtonLeng);
 		
 }}
 
+//
+
 
 /* Смена языка */
 import i18Obj from './translate.js';
 
-const buttonLang = document.querySelectorAll('.lang')
  //родитель переключателей
 const langContainer = document.querySelector('.language__list')
 //для родителя при клике функция
 langContainer.addEventListener("click",  getActive);
 
-const language = document.querySelectorAll('[data-i18]')
+const toTranslate = document.querySelectorAll('[data-i18]')
 
 function getActive(event){
 //найти кнопку что нажали вывод ее ""
@@ -147,11 +218,11 @@ function getActive(event){
 	return getTranslate(languages)
 
 
-function getTranslate(lng){
+function getTranslate(languages){
 
-language.forEach((el) => {
+	toTranslate.forEach((el) => {
 			
-		el.textContent = i18Obj[lng][el.dataset.i18]
+		el.textContent = i18Obj[languages][el.dataset.i18]
 		console.log(i18Obj)
 
 })
