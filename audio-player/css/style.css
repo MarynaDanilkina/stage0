@@ -1,0 +1,81 @@
+.contImg{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+}
+.container{
+	position: absolute;
+	height: 400pt;
+	width: 350pt;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	box-shadow: 0 0 50px #000;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.audioImg{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 70%;
+}
+.body__container__audio{
+	position: absolute;
+	left: 1px;
+	top: 375px;
+	background-color: rgb(174, 185, 164);
+	width: 100%;
+	height: 30%;
+}
+.play{
+	position: absolute;
+	left: 39px;
+	top: 21px;
+	width: 70px;
+	height: 70px;
+}
+.tetle{
+	position: absolute;
+   left: 130px;
+   top: 0px;
+   font-size: 32px;
+   color: rgb(55 106 44);
+}
+.song{
+	position: absolute;
+	left: 130px;
+	top: 42px;
+	font-size: 25px;
+	color: rgb(255, 255, 255);
+}
+.forward{
+	position: absolute;
+   left: 392px;
+   top: 56px;
+   width: 40px;
+   height: 40px;
+}
+.backward{
+	position: absolute;
+   left: 392px;
+   top: 16px;
+   width: 40px;
+   height: 40px;
+}
+.current{
+	position: absolute;
+	font-size: 25px;
+	color: #FFF;
+	left: 54px;
+	top: 125px;
+}
