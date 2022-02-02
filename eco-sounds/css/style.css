@@ -1,0 +1,149 @@
+/*Обнуление*/
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a:hover{
+	transition: .3s;
+	color: #bdae82;
+	text-decoration: none;
+
+}
+a{
+	color: #fff;
+	text-decoration: none;
+}
+
+ul,
+ol,
+li{
+    list-style: none;
+}
+img{
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body{
+    height: 100%;
+    line-height: 1;
+    font-size: 36px;
+    color: #fff;
+	 font-family: Inter;
+	 font-weight: 400;
+	 scroll-behavior: smooth; /**плавная прокрутка по якорям*/
+}
+body._lock{
+	overflow: hidden;
+}
+.wrapper{
+	background-color: #000;
+    min-height: 100%;
+    overflow: hidden;
+	 display: flex;          /**Прибить падвал в низ**/
+    flex-direction: column; /**Прибить падвал в низ**/
+}
+._container {
+	
+   margin: 0px auto;
+	padding: 0px 200px; /**Убрать прилипание**/
+	box-sizing: content-box; /**Убрать прилипание**/
+}
+
+.header__container {
+	
+	display: flex;
+	min-height: 90px;
+   align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 70px;
+	filter: invert(100%) sepia(2%) saturate(680%) hue-rotate(35deg) brightness(118%)	contrast(87%);
+	height: 70px;
+}
+.logo:hover {
+	filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+	contrast(87%) ;
+	
+}
+.menu__list {
+	display: flex;
+}
+.menu__item {
+	padding: 0px 0px 0px 30px;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	height: calc(93vh - 120px);
+	background-position: center center;
+	background-size: cover;
+   background-image: url(../assets/jpg/metallica.jpg);
+}
+.main__play{
+	border: 0;
+	width: 220px;
+	height: 220px;
+	background-image: url(../assets/svg/play.svg);	
+	background-size: contain;
+	background-color: transparent;
+	transition: .3s;
+}
+.pause{
+	background-image: url(../assets/svg/pause.svg);
+}
+
+.main__play:hover{
+	filter: grayscale(30%) sepia(21%) saturate(118%) contrast(138%);
+	-webkit-filter: grayscale(30%) sepia(21%) saturate(118%) contrast(138%);
+	-moz-filter: grayscale(30%) sepia(21%) saturate(118%) contrast(138%);
+}
+.footer{
+	
+	background-color:#000;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 1440px 150px;
+}
+.footer__container-body{
+	justify-content: space-between;
+	padding: 12px 0px;
+	align-items: center;
+	display: flex;
+}
+.footer__github{
+
+	display: flex;
+}
+.footer__github-text{
+
+	padding: 0px 30px 0px 0px;
+}
+.rss{
+	width: 190px;
+	height: 70px;
+	fill: #fff;
+}
+.rss:hover{
+	fill: #bdae82;
+}
+.active{
+	color: #bdae82;
+}
