@@ -32,15 +32,15 @@
 .body__container__audio{
 	position: absolute;
 	left: 1px;
-	top: 375px;
+	top:  375px;
 	background-color: rgb(174, 185, 164);
 	width: 100%;
 	height: 30%;
 }
 .play{
 	position: absolute;
-	left: 39px;
-	top: 21px;
+	left: 25px;
+	top: 15px;
 	width: 70px;
 	height: 70px;
 }
@@ -77,5 +77,20 @@
 	font-size: 25px;
 	color: #FFF;
 	left: 54px;
-	top: 125px;
+	top:124px;
+}
+.length{
+	position: absolute;
+	font-size: 25px;
+	color: #FFF;
+	left: 380px;
+	top: 124px;
+}
+.input{
+	position: absolute;
+    font-size: 25px;
+    color: #FFF;
+    left: 47px;
+    top: 104px;
+	 width: 274pt;
 }
