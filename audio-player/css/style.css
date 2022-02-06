@@ -86,8 +86,8 @@ body._lock{
 
 .container{
 	
-	height: 400pt;
-	width: 400pt;
+	height: 300px;
+	width: 300px;
 	justify-content: center;
 	box-shadow: 0 0 50px rgb(245, 245, 245);
 	
@@ -223,7 +223,7 @@ body._lock{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+
 	height: calc(100vh - 120px);
 	
 }
