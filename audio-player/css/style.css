@@ -1,3 +1,60 @@
+/*Обнуление*/
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a:hover{
+	transition: .3s;
+	color: rgb(156, 166, 173);
+	text-decoration: none;
+
+}
+a{
+	color: #fff;
+	text-decoration: none;
+}
+
+ul,
+ol,
+li{
+    list-style: none;
+}
+img{
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body{
+    height: 100%;
+    line-height: 1;
+    font-size: 36px;
+    color: #fff;
+	 font-family: Inter;
+	 font-weight: 400;
+	 scroll-behavior: smooth; /**плавная прокрутка по якорям*/
+}
+body._lock{
+	overflow: hidden;
+}
+.wrapper{
+ min-height: 100%;
+ overflow: hidden;
+	 display: flex;          /**Прибить падвал в низ**/
+	flex-direction: column; /**Прибить падвал в низ**/
+	
+}
 .contImg{
 	width: 100%;
 	height: 100%;
@@ -8,89 +65,198 @@
 	-webkit-filter: blur(2px);
 	-moz-filter: blur(2px);
 }
-.container{
+.conteinetAll{
+	z-index: 5;
 	position: absolute;
-	height: 400pt;
-	width: 350pt;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	display: flex;
-	box-shadow: 0 0 50px #000;
 	margin: auto;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
+	
+}
+.containet2{
+	padding-top: 30px;
+	width: 1000px;
+}
+
+.container{
+	
+	height: 400pt;
+	width: 400pt;
+	justify-content: center;
+	box-shadow: 0 0 50px rgb(245, 245, 245);
+	
 }
 .audioImg{
+	
+	
+	width: 100%;
+	height: 100%;
+}
+
+.mainImg{
+	
 	position: absolute;
-	left: 0;
+	height: 100%;
+	width: 100%;
+	margin: auto;
 	top: 0;
-	width: 100%;
-	height: 70%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	filter: blur(20px);
+	z-index: -1;
 }
-.body__container__audio{
-	position: absolute;
-	left: 1px;
-	top:  375px;
-	background-color: rgb(174, 185, 164);
-	width: 100%;
-	height: 30%;
-}
+
 .play{
-	position: absolute;
-	left: 25px;
-	top: 15px;
-	width: 70px;
+	
+	filter: invert(0) brightness(0) ;
+
 	height: 70px;
 }
 .tetle{
-	position: absolute;
-   left: 130px;
-   top: 0px;
-   font-size: 32px;
-   color: rgb(55 106 44);
+	
+  margin-bottom: 5px;
+   font-size: 40px;
+   color: rgb(232, 245, 255);
 }
 .song{
-	position: absolute;
-	left: 130px;
-	top: 42px;
+	margin-bottom: 5px;
+	margin-top: 5px;
 	font-size: 25px;
-	color: rgb(255, 255, 255);
+	color: rgb(232, 245, 255);
 }
 .forward{
-	position: absolute;
-   left: 392px;
-   top: 56px;
-   width: 40px;
-   height: 40px;
+	
+   filter: invert(0) brightness(0) ;
+   width: 70px;
+   height: 70px;
 }
 .backward{
-	position: absolute;
-   left: 392px;
-   top: 16px;
-   width: 40px;
-   height: 40px;
+	
+   filter: invert(0) brightness(0) ;
+   width: 70px;
+   height: 70px;
 }
 .current{
-	position: absolute;
+	
 	font-size: 25px;
-	color: #FFF;
-	left: 54px;
-	top:124px;
+	color: rgb(232, 245, 255);
+	
 }
 .length{
-	position: absolute;
+
 	font-size: 25px;
-	color: #FFF;
-	left: 380px;
-	top: 124px;
+	color: rgb(232, 245, 255);
+
 }
-.input{
-	position: absolute;
-    font-size: 25px;
-    color: #FFF;
-    left: 47px;
-    top: 104px;
-	 width: 274pt;
+.area{
+	height: 15px;
+	width: 100%;
+	background:  rgb(232, 245, 255);
+	border-radius: 50px;
+	cursor: pointer;
+}
+
+.area .input {
+
+   height: inherit;
+	width: 0%;
+	border-radius: inherit;
+	background: rgb(156, 166, 173);
+}
+.botn{
+	display: flex;
+
+}
+.times{
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+.botn{
+	justify-content: center;
+	margin-top: -25px;
+}
+.artict{
+	justify-content: center;
+}
+
+._container {
+	
+   margin: 0px auto;
+	padding: 0px 200px; /**Убрать прилипание**/
+	box-sizing: content-box; /**Убрать прилипание**/
+}
+
+.header__container {
+	
+	display: flex;
+	min-height: 90px;
+   align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 70px;
+	filter: invert(100%) sepia(2%) saturate(680%) hue-rotate(35deg) brightness(118%)	contrast(87%);
+	height: 70px;
+}
+.logo:hover {
+	filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+	contrast(87%) ;
+	
+}
+.menu__list {
+	display: flex;
+}
+.menu__item {
+	padding: 0px 0px 0px 30px;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	height: calc(100vh - 120px);
+	
+}
+
+
+.footer{
+	z-index: 5;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 1440px 150px;
+}
+.footer__container-body{
+	justify-content: space-between;
+	padding: 12px 0px;
+	align-items: center;
+	display: flex;
+}
+.footer__github{
+
+	display: flex;
+}
+.footer__github-text{
+
+	padding: 0px 30px 0px 0px;
+}
+.rss{
+	width: 190px;
+	height: 70px;
+	fill: rgb(255, 255, 255);
+}
+.rss:hover{
+	fill: rgb(156, 166, 173);
+}
+.btn{
+	padding: 0px 15px 0px 15px;
 }
