@@ -1,64 +1,57 @@
 const headerBat = document.querySelector(".header");
 const btn = document.querySelectorAll(".btn");
-let url = 'https://api.icndb.com/jokes/random';
 const content = document.querySelector(".content");
 const play = document.querySelector(".main__play");
-import i18Obj from './ru.js';
+let quotes = "https://type.fit/api/quotes";
 const en = document.querySelector(".en");
 const ru = document.querySelector(".ru");
 
-headerBat.addEventListener("click", addActive);
-headerBat.addEventListener("click", checkLeng);
+play.addEventListener("click", getQuotes)
+ru.addEventListener("click", toRu)
+en.addEventListener("click", toEn)
 
-function checkLeng(){
-	if(en.classList.contains("active")){
-	console.log('en');
-	play.addEventListener("click", addNew);
-	
-	}
-	if(ru.classList.contains("active")){
-	console.log('ru');
-	toRu();
-	play.addEventListener("click", toRu);
-	}
-}
-//checkLeng()
-
-
-
-async function getData(url) {
-	const res = await fetch(url);
+async function getQuotes(){
+	console.log(quotes)
+	const res = await fetch(quotes);
 	const data = await res.json();
 	console.log(data);
 	showData(data);
 }
- getData(url);
-
+getQuotes()
 
 function showData(data){
+	let rand = Math.floor(Math.random()*(100 - 0 +1))+0;
 
-	content.textContent = data.value.joke;
+	content.textContent = data[rand].text;
 }
-
-
-function addNew(){
-	getData(url);
-}
-
-
-function addActive(event){
-	if(event.target.classList.contains('btn')) {
-		btn.forEach(Buto => {
-			 	Buto.classList.remove('active');
-	})
-
-	const target = event.target;
-	target.classList.add('active') ;
-	
-}}
 
 function toRu(){
-	let rand = Math.floor(Math.random()*(77 - 0 +1))+0;
-	content.textContent = i18Obj[rand].текст;
+	en.classList.remove("active")
+	ru.classList.add("active")
+	 quotes = "./json/data.json";
+	 getQuotes()
+}
 
+function toEn(){
+	ru.classList.remove("active")
+	en.classList.add("active")
+	 quotes = "https://type.fit/api/quotes";
+	 getQuotes()
+}
+
+//анимация
+const folio1 = document.querySelector(".folio11")
+const pop = document.querySelector("#folio2")
+//запустить анимацию при нажатии на кнопку
+play.addEventListener("click", ()=>{
+	folio1.classList.add("folio1")
+	pop.classList.add("forfolio2")
+	//через секунду удалить класс
+	
+	setTimeout(remClass, 1000)
+})
+
+function remClass(){
+	folio1.classList.remove("folio1")
+	pop.classList.remove("forfolio2")
 }
