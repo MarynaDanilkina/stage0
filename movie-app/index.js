@@ -1,45 +1,50 @@
-const gallery = document.querySelector(".gallery");
-const url =  "https://api.unsplash.com/search/photos?query=london&per_page=30&tag_mode=all&orientation=landscape&client_id=9cHhCOX5z-1jnwPd7nSgLZfFuBTGbkRYXbP36bwKwM4";
+const url =  "https://api.themoviedb.org/3/search/movie?api_key=dbd18ae8e944776fe949cc13cc244733&query=london";
+const newImg ="https://www.themoviedb.org/t/p/w300"
+
 
 async function getData(url){
-	
 	const res = await fetch(url);
 	const data = await res.json();
-	if (data.total > 0) {
-		showData(data);
-	 } else {
-		gallery.innerHTML = "";
-			const img = `<img class="gallery-error" src="./img/error.jpg" alt="error">`;
-		gallery.insertAdjacentHTML('beforeend', img);
-
-	 }
+	console.log(data)
+	showImg(data)
 }
 getData(url)
 
-function showData(data){
 
-	gallery.innerHTML = "";
+function showImg(data){
 
-	console.log(data)
-	data.results.map((value)=>{
-		const img = document.createElement('img');
-		img.classList.add('gallery-img');
-		img.src = `${value.urls.regular}`;
-		img.alt = `image`;
-		gallery.append(img);
-		//или 
-		//const img = `<img class="gallery-img" src="${el.urls.regular}" alt="image">`;
-		//gallery.insertAdjacentHTML('beforeend', img);
-	})
+	const gallery = document.querySelector(".gallery");
+	gallery.innerHTML = ""
+	data.results.forEach(element => {
+		const movie = document.createElement("div");
+		movie.classList.add("movie");
+		movie.innerHTML = `
+		<img class="gallery-img"
+						src="${newImg+element.poster_path}"
+						alt="${element.original_title}">
+					<div class="info">
+						<div class="movie__title">
+						${element.original_title}
+						</div>
+						<div class="movie__average">
+							<p class="movie_average">
+							${element.vote_average}
+							</p>
+						</div>
+					</div>
+		`;
+		gallery.appendChild(movie);
+	});
 }
 
+//для поиска
 const form = document.querySelector("form")
 const input = document.querySelector(".input")
-const urlSearch = "https://api.unsplash.com/search/photos?query=";
+const urlSearch = "https://api.themoviedb.org/3/search/movie?api_key=dbd18ae8e944776fe949cc13cc244733&query=";
 form.addEventListener("submit", (event) => {
 	event.preventDefault();
  
-	const result = `${urlSearch}${input.value}&tag_mode=all&orientation=landscape&client_id=9cHhCOX5z-1jnwPd7nSgLZfFuBTGbkRYXbP36bwKwM4`;
+	const result = `${urlSearch}${input.value}`;
 	if (input.value) {
 	  getData(result);
 	  console.log(input.value);

@@ -29,7 +29,7 @@ img{
 body{
 	height: 100%;
 	line-height: 1;
-	font-size: 36px;
+	font-size: 20px;
 	color: #fff;
 	font-family: Inter;
 	font-weight: 400;
@@ -86,18 +86,41 @@ button{
 	padding: 20px 0;
 	background:rgb(0 32 55);
 }
+.logo{
+	width: 70px;
+	height: 70px;
+}
 .gallery{
+	align-content: flex-start;
+
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 20px;
 	padding: 20px 20px;
 }
+.info{
+	height: 90px;
+	width: 300px;
+}
 .gallery-img{
-	width: 380px;
-	height: 253px;
+	width: 300px;
+	height: 450px;
 	cursor: pointer;
 	transition: 1s;
+}
+
+.info{
+	background-color: rgb(77 102 114);
+	display: flex;
+	justify-content: space-between;
+}
+.movie__title{
+	padding: 20px;
+}
+.movie_average{
+	background-color: rgb(112, 156, 177);
+	padding: 20px;
 }
 .footer{
 	
